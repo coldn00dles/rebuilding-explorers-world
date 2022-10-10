@@ -4,6 +4,46 @@ import DoK from "../components/typescript/react";
 
 <html lang="en">
   <head>
+    <style>
+      * {
+        background-color: #010001;
+        box-sizing : border-box;
+        margin : 0;
+        padding : 0;
+      }
+      ul{
+        display : flex;
+        justify-content : space-between;
+        align-items : center;
+        padding : 10px 20% 10px 20%; 
+        flex-wrap: wrap;
+      }
+      .exptext{
+        font-weight : bold;
+        color : grey;
+        font-size : 20px;
+      }
+      li{
+        padding : 20px 10% 5% 10%;
+      }
+      .whitetext{
+        color : white;
+        display : flex;
+        justify-content : center;
+        align-items : center;
+        flex-wrap: wrap;
+        margin : auto;
+        width : auto;
+      }
+      .centred{
+        justify-content: center;
+        margin:auto;
+        display:block;
+      }
+      .exptext:hover{
+        color:white;
+      }
+    </style>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
@@ -11,6 +51,25 @@ import DoK from "../components/typescript/react";
     <title>Data on Kubernetes Explorer's world</title>
   </head>
   <body>
-    <DoK />
+    <header>
+    <nav class = "centred">
+      <ul>
+        <li> <a href="#">
+          <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" class="text-white" aria-hidden="true" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+            </a>
+        </li>
+        <li class = "exptext"><a href="#">Explorer's World</a></li>
+        <li>
+          <a href="#">
+          <img src="/src/images/download.png" height="120" width = "120"> 
+          </a>
+        </li>
+      </ul>
+    </nav>
+    </header>
+    <div class = "whitetext">
+      <DoK />
+    </div>
   </body>
 </html>
